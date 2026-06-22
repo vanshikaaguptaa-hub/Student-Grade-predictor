@@ -4,6 +4,7 @@ import joblib
 
 # Load model
 model = joblib.load("model.pkl")
+scaler = joblib.load("scaler.pkl")
 
 st.title("Student Grade Prediction")
 

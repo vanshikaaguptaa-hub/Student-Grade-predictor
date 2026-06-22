@@ -54,9 +54,9 @@ if st.button("Predict Grade"):
     "Study Hours": [study_hours],
     "Online Classes Taken": [online_classes],
     "ExtracurricularActivities_Yes": [extra],
-    "ParentalSupport_Medium": [parent_support_medium],
+    "ParentalSupport_Medium": [parental_support_medium],
     "Gender_Male": [gender_male],
-    "ParentalSupport_Low": [parent_support_low]
+    "ParentalSupport_Low": [parental_support_low]
 })
     data_scaled = scaler.transform(data)
     prediction = model.predict(data_scaled)

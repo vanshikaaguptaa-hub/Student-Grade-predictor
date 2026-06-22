@@ -44,19 +44,19 @@ online_classes = st.selectbox(
     "Online Classes Taken",
     ["No", "Yes"]
 )
-online_classes_true = 1 if online_classes == "Yes" else 0
+online_classes = 1 if online_classes == "Yes" else 0
 if st.button("Predict Grade"):
     data = pd.DataFrame({
-    "AttendanceRate": [attendance_rate],
+    "AttendanceRate": [attendance],
     "Attendance (%)": [attendance_percent],
     "PreviousGrade": [previous_grade],
     "StudyHoursPerWeek": [study_hours_week],
     "Study Hours": [study_hours],
     "Online Classes Taken": [online_classes],
-    "ExtracurricularActivities_Yes": [extra_activity],
-    "ParentalSupport_Medium": [parent_medium],
+    "ExtracurricularActivities_Yes": [extra],
+    "ParentalSupport_Medium": [parent_support_medium],
     "Gender_Male": [gender_male],
-    "ParentalSupport_Low": [parent_low]
+    "ParentalSupport_Low": [parent_support_low]
 })
     data_scaled = scaler.transform(data)
     prediction = model.predict(data_scaled)

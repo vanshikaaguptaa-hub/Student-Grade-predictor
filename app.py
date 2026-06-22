@@ -66,6 +66,7 @@ if st.button("Predict Grade"):
     "ParentalSupport_Medium": [1],
     "Online Classes Taken_True": [1]
 })
-    prediction = model.predict(data)
-
+    data_scaled = scaler.transform(data)
+    prediction = model.predict(data_scaled)
+    
     st.success(f"Predicted Final Grade: {prediction[0]:.2f}")

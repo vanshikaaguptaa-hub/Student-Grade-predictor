@@ -55,8 +55,8 @@ if st.button("Predict Grade"):
     "Online Classes Taken": [online_classes],
     "Gender_Male": [gender_male],
     "ExtracurricularActivities_Yes": [extra],
-    "ParentalSupport_Low": [parental_support_low]
-    "ParentalSupport_Medium": [parental_support_medium],
+    "ParentalSupport_Low": [parental_support_low],
+    "ParentalSupport_Medium": [parental_support_medium]
 })
     st.write("Scaler expects:")
     st.write(list(scaler.feature_names_in_))

@@ -58,13 +58,6 @@ if st.button("Predict Grade"):
     "ParentalSupport_Low": [parental_support_low],
     "ParentalSupport_Medium": [parental_support_medium]
 })
-    st.write("Scaler expects:")
-    st.write(list(scaler.feature_names_in_))
-
-    st.write("Data provides:")
-    st.write(list(data.columns))
-    st.write(data)
-    
     data_scaled = scaler.transform(data)
     prediction = model.predict(data_scaled)
     

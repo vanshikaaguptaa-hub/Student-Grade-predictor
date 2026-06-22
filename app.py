@@ -48,15 +48,15 @@ online_classes = 1 if online_classes == "Yes" else 0
 if st.button("Predict Grade"):
     data = pd.DataFrame({
     "AttendanceRate": [attendance],
-    "Attendance (%)": [attendance_percent],
-    "PreviousGrade": [previous_grade],
     "StudyHoursPerWeek": [study_hours_week],
+    "PreviousGrade": [previous_grade],
     "Study Hours": [study_hours],
+    "Attendance (%)": [attendance_percent],
     "Online Classes Taken": [online_classes],
-    "ExtracurricularActivities_Yes": [extra],
-    "ParentalSupport_Medium": [parental_support_medium],
     "Gender_Male": [gender_male],
+    "ExtracurricularActivities_Yes": [extra],
     "ParentalSupport_Low": [parental_support_low]
+    "ParentalSupport_Medium": [parental_support_medium],
 })
     st.write("Scaler expects:")
     st.write(list(scaler.feature_names_in_))
